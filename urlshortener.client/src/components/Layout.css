@@ -1,0 +1,15 @@
+.list {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(60, 60, 60);
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+}
+
+li {
+    margin-left: 10px;
+}
