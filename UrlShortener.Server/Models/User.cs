@@ -19,5 +19,5 @@ public class User
     
     public bool IsAdmin { get; set; }
     public DateTime CreatedAt { get; set; }
-    public virtual ICollection<ShortenedUrl> ShortenedUrls { get; set; }
+
 }

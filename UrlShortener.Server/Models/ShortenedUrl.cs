@@ -21,3 +21,20 @@ public class ShortenedUrl
     
     public virtual User CreatedBy { get; set; }
 }
+
+public static class UrlShortenerAlgorithm
+{
+    private const string Alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    private const int CodeLength = 6;
+    private static readonly Random _random = new Random();
+
+    public static string GenerateShortenedUrl()
+    {
+        var shortUrl = new char[CodeLength];
+        for (int i = 0; i < shortUrl.Length; i++)
+        {
+            shortUrl[i] = Alphabet[_random.Next(Alphabet.Length)];
+        }
+        return new string(shortUrl);
+    }
+}
